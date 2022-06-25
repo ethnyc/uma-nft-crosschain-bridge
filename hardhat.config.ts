@@ -1,13 +1,16 @@
-require("dotenv").config();
+import * as dotenv from "dotenv";
 
-require("@nomiclabs/hardhat-etherscan");
-require("@nomiclabs/hardhat-waffle");
-require("hardhat-gas-reporter");
-require("solidity-coverage");
+import "@nomiclabs/hardhat-etherscan";
+import "@nomiclabs/hardhat-waffle";
+import "hardhat-gas-reporter";
+import "solidity-coverage";
 
-const networks = require("./networks.json");
+import { HardhatUserConfig } from "hardhat/config";
+import networks from "./networks.json";
 
-module.exports = {
+dotenv.config();
+
+const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
     hardhat: process.env.FORK_RINKEBY
@@ -27,3 +30,5 @@ module.exports = {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
+
+export default config;
