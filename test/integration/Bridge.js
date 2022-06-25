@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Bridge", function () {
+describe("Bridge Integration Test", function () {
   let mockUMA;
   let bridge;
   beforeEach(async function () {

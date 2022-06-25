@@ -1,0 +1,8 @@
+{
+  "rinkeby": {
+    "name": "Rinkeby",
+    "chainId": 4,
+    "exproler": "https://rinkeby.etherscan.io/",
+    "rpc": "https://rinkeby.infura.io/v3/95f65ab099894076814e8526f52c9149"
+  }
+}
